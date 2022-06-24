@@ -1,0 +1,186 @@
+/* media query */
+@media (min-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+}
+@media (min-width: 766px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1152px;
+    }
+} 
+/* tablet */
+@media(max-width:1024px){
+    header #main-nav{
+        display: none;
+    }
+    #menu-icon{
+        display:block;
+    }
+    .hero .left img{
+        width: 260px;
+    }
+    .hero .right h1{
+        font-size: 3rem;;
+    }
+    .hero{
+        padding-top: 15rem;
+    }
+    header{
+        clip-path: polygon(0 0, 100% 0,100% 100%,27% 90%,0 100%);
+    }
+    section.about .about-me-img{
+        height: 360px;
+    }
+    section.services .card-wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+    section.work .card-wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+    section.blog .card-wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    section.blog{
+        clip-path: polygon(0 0, 100% 0,100% 100%,67% 97%,0 100%);
+    }
+}
+@media (max-width:576px){
+    .hero{
+        flex-direction: column;
+    }
+    header{
+        clip-path: polygon(0 0, 100% 0,100% 100%,69% 95%,0 100%);
+    }
+    .hero .right{
+        position: absolute;
+        top: 260px;
+        padding: 0 1rem;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
+    }
+    .hero .left{
+        margin-top: -8rem;
+        margin-right: -9rem;
+        margin-bottom: 2rem;
+    }
+    .about-inner-wrap{
+        flex-direction: column;
+    }
+    .about{
+        text-align: center;
+    }
+    .about .social{
+        justify-content: center;
+    }
+    section{
+        padding: 4rem 0;
+    }
+    section.services .card-wrapper{
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 6rem;
+    }
+    section.freelancer h1{
+        line-height:1.2 ;
+    }
+    section.freelancer{
+        clip-path: polygon(0 0, 100% 0,100% 100%,67% 90%,0 100%);
+        padding-bottom: 8rem;
+    }
+    section.reviews .slider .slide{
+        padding: 0;
+    }
+    .section-heading + p{
+        margin-bottom: 3rem;
+    }
+    section.work .card-wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    section.work .card-wrapper .card{
+        padding: 1rem;
+    }
+    section.blog .card-wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    section.contact .card-wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    section.contact .input-wrap{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.site-main-wrapper{
+    position: relative;
+}
+.menu{
+    position:absolute ;
+    top: 40px;
+    right: 40px;
+    z-index: 1;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+.menu img{
+    width: 30px;
+}
+.mobile-nav{
+    position: fixed ;
+    top:0;
+    left: 0;
+    z-index: 1001;
+    /* background-color: var(--dark); */
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/camera.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    padding-top: 5rem;
+   display:none ;
+    transition: all 0.5s ease-in-out;
+}
+.open{
+    display: block;
+}
+.close{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+.close img{
+    width: 30px;
+}
+.mobile-nav ul{
+    list-style-type: none;
+}
+.mobile-nav ul li a{
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 2rem;
+}
+.mobile-nav ul li{
+    border: 2px solid var(--dark);
+    background-color: var(--dark);
+    opacity: 0.6;
+    box-shadow: 5px 5px 15px var(--light);
+    margin: 1rem auto;
+    text-align: center;
+    border-radius: 25px;
+    width: 500px;
+}
